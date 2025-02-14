@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 2rem;
+  color: #e74c3c;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.box:hover {
+  background: #f7d794;
+}
+
+.win {
+  background: #2ecc71 !important;
+  color: white !important;
+  box-shadow: 0 0 15px rgba(46, 204, 113, 0.8);
+}
+
+#reset-btn, #new-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background: #34495e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+
+#reset-btn:hover, #new-btn:hover {
+  background: #16a085;
+}
+
+.msg-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+  animation: pop-up 0.5s ease-in-out;
+}
+
+@keyframes pop-up {
+  0% { transform: translate(-50%, -60%) scale(0.8); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+#msg {
+  font-size: 2rem;
+  color: #f1c40f;
+}
